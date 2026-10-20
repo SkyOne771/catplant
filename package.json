@@ -1,0 +1,31 @@
+{
+  "name": "catplant",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "playwright test",
+    "check": "npm run format:check && npm run build -- --base=/catplant/ && npm test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "prettier": "^3.9.10",
+    "vite": "^6.1.0"
+  },
+  "type": "module",
+  "description": "A cozy browser gardening game with an animated cat, ten crops, and device-local progress.",
+  "license": "MIT",
+  "author": "SkyOne771",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SkyOne771/catplant.git"
+  },
+  "homepage": "https://github.com/SkyOne771/catplant#readme",
+  "engines": {
+    "node": ">=22"
+  }
+}

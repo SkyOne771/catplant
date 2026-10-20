@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5e9" />
+    <title>Catplant · A little garden, a little joy</title>
+    <link rel="icon" href="/assets/icon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">
+        <span class="brand-icon">✿</span> catplant<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <nav>
+        <button class="nav-active" id="garden-tab">My garden</button
+        ><button id="collection-tab">
+          Crop collection <span id="collection-count">0/10</span>
+        </button>
+      </nav>
+      <button class="sound" id="sound" aria-label="Turn on garden sounds">
+        ♫ <span>Sound off</span>
+      </button>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <div class="eyebrow"><span></span> A LITTLE EVERYDAY JOY</div>
+          <h1>Good things take a little <em>tending.</em></h1>
+          <p>A sunny patch, a few seeds, and all the time in the world.</p>
+        </div>
+        <div class="day">
+          <span class="sun">☀</span>
+          <div>
+            <strong>A lovely day to grow</strong
+            ><span>Day <b id="day">1</b> · Gentle sunshine</span>
+          </div>
+        </div>
+      </section>
+      <div class="game-layout">
+        <section class="garden-card">
+          <div class="garden-top">
+            <div><span class="live-dot"></span> YOUR LITTLE GARDEN</div>
+            <div class="garden-controls">
+              <span id="garden-status">10 patches of possibility</span
+              ><button
+                id="reset-progress"
+                title="Reset all garden progress on this device"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M3 10a9 9 0 1 1 2 8M3 4v6h6" /></svg
+                ><span>Reset progress</span></button
+              ><button
+                id="focus-garden"
+                aria-pressed="false"
+                title="Expand the garden"
+              >
+                ⛶ <span>Expand</span>
+              </button>
+            </div>
+          </div>
+          <div class="scene" id="scene">
+            <img
+              class="landscape"
+              src="/assets/garden.svg"
+              alt=""
+              draggable="false"
+            />
+            <div class="garden-sign">Miso’s garden <span>♡</span></div>
+            <div class="plots" id="plots"></div>
+            <div id="cat" class="cat" aria-label="Miso the cat">
+              <svg viewBox="0 0 150 160">
+                <ellipse
+                  cx="76"
+                  cy="145"
+                  rx="53"
+                  ry="10"
+                  fill="#7a8d5c"
+                  opacity=".2"
+                />
+                <path
+                  class="cat-tail"
+                  d="M112 124q42 4 29-29"
+                  fill="none"
+                  stroke="#d99e66"
+                  stroke-width="15"
+                  stroke-linecap="round"
+                />
+                <ellipse cx="76" cy="111" rx="37" ry="35" fill="#eab87e" />
+                <path
+                  d="M43 63L43 19 68 37Q86 32 99 37l25-19-5 48"
+                  fill="#eab87e"
+                  stroke="#b78350"
+                  stroke-width="2"
+                />
+                <path d="M49 43V29l14 13m42 0 12-13v19" fill="#d8907c" />
+                <ellipse cx="81" cy="64" rx="42" ry="33" fill="#efc48e" />
+                <path
+                  d="M57 64q6 8 12 0m23 0q6 8 12 0"
+                  fill="none"
+                  stroke="#624d3e"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path d="m77 73 5 4 5-4" fill="#b87a6b" />
+                <path
+                  d="M82 77v5m0-1q-6 6-11 0m11 0q6 6 11 0"
+                  stroke="#624d3e"
+                  fill="none"
+                  stroke-width="2"
+                />
+                <path
+                  d="m60 40 3 10m14-13 1 10m15-9-2 10M42 73l-16-3m17 11-16 2m92-10 15-3m-15 11 15 2"
+                  stroke="#be8955"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <ellipse cx="59" cy="78" rx="7" ry="4" fill="#de9b84" />
+                <ellipse cx="104" cy="78" rx="7" ry="4" fill="#de9b84" />
+                <path
+                  class="cat-paw paw-left"
+                  d="M51 115v22q10 8 20 0v-14"
+                  fill="#efc48e"
+                />
+                <path
+                  class="cat-paw paw-right"
+                  d="M92 115v22q10 8 20 0"
+                  fill="#efc48e"
+                />
+                <path
+                  d="M48 98q30 20 62 0"
+                  stroke="#8b9d75"
+                  stroke-width="10"
+                  fill="none"
+                />
+                <path d="m75 105 13 0-6 20z" fill="#8b9d75" /></svg
+              ><span id="cat-heart">♡</span>
+            </div>
+            <div class="scene-note">
+              Click the garden to take Miso for a stroll.
+            </div>
+            <span class="butterfly">ʚɞ</span>
+          </div>
+          <div class="toolbox">
+            <div class="tool-label">
+              A little care<br /><strong>Choose your tool</strong>
+            </div>
+            <div class="tools" id="tools">
+              <button data-tool="plant" class="selected">
+                <span>♧</span>Plant <kbd>1</kbd></button
+              ><button data-tool="water">
+                <span>♧</span>Water <kbd>2</kbd></button
+              ><button data-tool="tend"><span>✧</span>Tend <kbd>3</kbd></button
+              ><button data-tool="harvest">
+                <span>♧</span>Harvest <kbd>4</kbd>
+              </button>
+            </div>
+            <button class="help" id="help" aria-label="How to play">?</button>
+          </div>
+          <div class="hint" id="hint">
+            Pick a seed on the right, then tap an empty patch to plant it.
+          </div>
+        </section>
+        <aside>
+          <section class="miso-card">
+            <div class="aside-label">YOUR GARDEN COMPANION <span>♡</span></div>
+            <div class="miso-title">
+              <span class="avatar">ฅ</span>
+              <div>
+                <h2>Hello, I’m Miso.</h2>
+                <span>Small paws. Big heart.</span>
+              </div>
+            </div>
+            <p id="message" aria-live="polite">
+              “Let’s grow something lovely together. One little seed at a time.”
+            </p>
+            <div class="happiness">
+              <span>Feeling happy</span><span id="hearts">♥ ♥ ♥ ♡ ♡</span>
+            </div>
+            <div class="happiness-track"><i id="happiness-bar"></i></div>
+          </section>
+          <section class="seeds-card">
+            <div class="section-heading">
+              <h2>The seed basket</h2>
+              <span>10 little wonders</span>
+            </div>
+            <p>What shall we grow today?</p>
+            <div class="seeds" id="seeds"></div>
+            <div class="seed-info" id="seed-info"></div>
+          </section>
+          <section class="harvest-card">
+            <span class="basket">♧</span>
+            <div>
+              <span>A little basket of joy</span
+              ><strong><b id="harvest-count">0</b> crops harvested</strong>
+            </div>
+            <span>♡</span>
+          </section>
+        </aside>
+      </div>
+      <footer>
+        <span>Made for slow moments <span>✿</span></span
+        ><span>No rush. No wrong turns. Just a little growing.</span
+        ><button id="reset">Start a fresh garden ↗</button>
+      </footer>
+    </main>
+    <dialog id="modal">
+      <button class="close" aria-label="Close">×</button>
+      <div id="modal-content"></div>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

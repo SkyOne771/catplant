@@ -1,0 +1,2015 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #3e4e3d;
+  background: #f7f6ee;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #c48c58;
+  outline-offset: 4px;
+}
+header {
+  height: 94px;
+  border-bottom: 1px solid #e5e5d8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5.2%;
+  gap: 30px;
+}
+.brand {
+  font-family: "Lora", serif;
+  font-size: 33px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #425c42;
+  letter-spacing: -1.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-icon {
+  font-family: serif;
+  font-size: 42px;
+  color: #6b8658;
+}
+.brand-dot {
+  color: #d49a70;
+  margin-left: -10px;
+}
+nav {
+  display: flex;
+  gap: 30px;
+  align-self: stretch;
+}
+nav button {
+  background: none;
+  border: 0;
+  font-size: 13px;
+  color: #898d7c;
+  position: relative;
+}
+nav .nav-active {
+  color: #486443;
+  font-weight: 600;
+}
+nav .nav-active:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  background: #718762;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+nav span {
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background: #eaece0;
+  margin-left: 6px;
+}
+.sound {
+  background: none;
+  border: 1px solid #dcdfcf;
+  border-radius: 22px;
+  padding: 9px 15px;
+  font-size: 17px;
+}
+.sound span {
+  font-size: 11px;
+  margin-left: 5px;
+}
+main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 39px 5.2% 0;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 31px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #7e8b6c;
+}
+.eyebrow span {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #97a976;
+}
+h1 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: -1.2px;
+  margin: 13px 0 10px;
+}
+h1 em {
+  color: #7b8e61;
+}
+p {
+  font-size: 13px;
+  color: #8d9280;
+  line-height: 1.7;
+  margin: 0;
+}
+.day {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 20px;
+}
+.sun {
+  font-size: 35px;
+  color: #c9aa64;
+}
+.day strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+.day div > span {
+  font-size: 11px;
+  color: #939885;
+  display: block;
+  margin-top: 5px;
+}
+.day b {
+  font-weight: 400;
+}
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 295px;
+  gap: 23px;
+  align-items: start;
+}
+.garden-card {
+  border: 1px solid #dce0cf;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fffdf5;
+  box-shadow: 0 5px 15px #444f3210;
+}
+.garden-top {
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 23px;
+  background: #fdfbf2;
+  font-size: 10px;
+  color: #929780;
+}
+.garden-top > div {
+  color: #687459;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.1px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8ba16a;
+}
+.scene {
+  height: 450px;
+  background: #cadbb8;
+  position: relative;
+  overflow: hidden;
+}
+.landscape {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.garden-sign {
+  position: absolute;
+  top: 50px;
+  left: 38%;
+  background: #eee2bc;
+  color: #8a7857;
+  padding: 10px 20px;
+  transform: rotate(-4deg);
+  border-radius: 5px;
+  font-family: "Lora", serif;
+  font-size: 13px;
+  border: 2px solid #d4c59a;
+  box-shadow: 2px 4px #8d986a30;
+}
+.garden-sign:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 48%;
+  height: 28px;
+  width: 8px;
+  background: #bba777;
+}
+.garden-sign span {
+  margin-left: 8px;
+}
+.plots {
+  position: absolute;
+  left: 17%;
+  right: 12%;
+  top: 31%;
+  height: 43%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 23px 15px;
+  transform: rotate(-3deg);
+}
+.plot {
+  position: relative;
+  border: 0;
+  border-radius: 45%;
+  background: #af8259;
+  box-shadow:
+    0 6px 0 #8d6848,
+    inset 0 0 0 4px #bf966a;
+  background-image: radial-gradient(#8f6747 1px, transparent 1px);
+  background-size: 13px 11px;
+  transition:
+    filter 0.2s,
+    transform 0.2s;
+  min-width: 0;
+}
+.plot:hover {
+  filter: brightness(1.08);
+  transform: translateY(-5px);
+}
+.plot.empty:after {
+  content: "+";
+  font-size: 24px;
+  color: #dab990;
+  font-weight: 400;
+  opacity: 0.65;
+}
+.plant-art {
+  position: absolute;
+  width: 67px;
+  height: 80px;
+  left: 50%;
+  bottom: 14%;
+  transform: translateX(-50%) rotate(3deg);
+  filter: drop-shadow(0 3px 1px #59432e25);
+  pointer-events: none;
+}
+.plot-tag {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%) rotate(3deg);
+  white-space: nowrap;
+  font-size: 8px;
+  background: #f8f1dc;
+  color: #71694e;
+  padding: 3px 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 3px #4d563119;
+}
+.plot .need {
+  position: absolute;
+  right: -4px;
+  top: -12px;
+  background: #f9f8e8;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  color: #719aaf;
+  font-size: 13px;
+  z-index: 2;
+}
+.plot.ready .need {
+  color: #bc8c40;
+}
+.cat {
+  position: absolute;
+  width: 112px;
+  bottom: 25px;
+  left: 8%;
+  transition:
+    left 0.65s ease,
+    bottom 0.65s ease;
+  pointer-events: none;
+}
+.cat svg {
+  width: 100%;
+  display: block;
+}
+.cat > span {
+  position: absolute;
+  right: -7px;
+  top: 8px;
+  color: #c58478;
+  font-size: 28px;
+  animation: float 3s ease-in-out infinite;
+}
+.scene-note {
+  position: absolute;
+  bottom: 26px;
+  left: 45%;
+  font-family: "Lora", serif;
+  font-size: 12px;
+  font-style: italic;
+  color: #778161;
+}
+.butterfly {
+  position: absolute;
+  right: 10%;
+  top: 27%;
+  color: #e9b78f;
+  font-size: 28px;
+  animation: float 4s ease-in-out infinite;
+}
+.toolbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 20px 14px;
+  gap: 15px;
+}
+.tool-label {
+  font-size: 9px;
+  color: #969987;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+.tool-label strong {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6e795e;
+}
+.tools {
+  display: flex;
+  gap: 7px;
+  flex: 1;
+  justify-content: center;
+}
+.tools button {
+  border: 1px solid #e4e6d8;
+  background: #fafaf1;
+  border-radius: 10px;
+  padding: 9px 11px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tools button > span {
+  font-size: 20px;
+  color: #83926c;
+  line-height: 1;
+}
+.tools button[data-tool="water"] > span {
+  color: #7196a4;
+  transform: rotate(140deg);
+}
+.tools button.selected {
+  background: #e9eddb;
+  border-color: #a9b88c;
+  color: #4f6541;
+  box-shadow: 0 2px 0 #dbe2c7;
+}
+.tools kbd {
+  font-size: 8px;
+  border: 1px solid #dce1ce;
+  padding: 1px 3px;
+  border-radius: 3px;
+  color: #a2a78f;
+}
+.help {
+  border: 1px solid #dfe3d2;
+  background: none;
+  color: #929d7e;
+  border-radius: 50%;
+  height: 21px;
+  width: 21px;
+  font-size: 11px;
+}
+.hint {
+  text-align: center;
+  font-size: 10px;
+  color: #9b9d8c;
+  padding: 0 10px 16px;
+}
+aside {
+  display: grid;
+  gap: 17px;
+}
+.miso-card {
+  background: #eeefe1;
+  border: 1px solid #dee3ce;
+  border-radius: 14px;
+  padding: 21px;
+}
+.aside-label {
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  color: #83906e;
+  display: flex;
+  justify-content: space-between;
+}
+.aside-label span {
+  font-size: 15px;
+  line-height: 8px;
+}
+.miso-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0 14px;
+}
+.avatar {
+  font-size: 37px;
+  color: #ac8356;
+  border: 1px solid #d9d9bd;
+  border-radius: 50%;
+  background: #e6e7d2;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 40px;
+}
+h2 {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+.miso-title div > span {
+  font-size: 10px;
+  color: #8e977e;
+}
+.miso-card p {
+  font-family: "Lora", serif;
+  font-size: 12px;
+  font-style: italic;
+  color: #7e896d;
+  line-height: 1.8;
+  min-height: 44px;
+}
+.happiness {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  color: #879374;
+}
+.happiness > span:last-child {
+  color: #b58c72;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+.happiness-track {
+  height: 4px;
+  border-radius: 4px;
+  background: #dfe4cd;
+  margin-top: 8px;
+}
+.happiness-track i {
+  height: 100%;
+  display: block;
+  width: 60%;
+  background: #a4b481;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+.seeds-card {
+  border: 1px solid #e1e3d4;
+  background: #fdfcf5;
+  border-radius: 14px;
+  padding: 20px 18px 14px;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-heading h2 {
+  font-size: 16px;
+}
+.section-heading > span {
+  font-size: 8px;
+  color: #9b9e8c;
+}
+.seeds-card > p {
+  font-size: 10px;
+  margin: 5px 0 17px;
+}
+.seeds {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+}
+.seed {
+  border: 1px solid #e7e7d9;
+  border-radius: 9px;
+  background: #f6f6eb;
+  padding: 5px 2px 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 7px;
+  color: #8d927c;
+}
+.seed svg {
+  width: 29px;
+  height: 31px;
+}
+.seed.active {
+  border-color: #9eae7e;
+  background: #eaf0dc;
+  box-shadow: 0 0 0 1px #b5c39844;
+}
+.seed-info {
+  margin-top: 16px;
+  border-top: 1px dashed #e0e3d2;
+  padding-top: 12px;
+  font-size: 10px;
+  color: #929b81;
+  line-height: 1.7;
+}
+.seed-info strong {
+  font-size: 11px;
+  color: #65744f;
+  font-weight: 500;
+}
+.harvest-card {
+  padding: 19px 18px;
+  border: 1px solid #e4e3d4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: #f3f1e6;
+}
+.basket {
+  font-size: 30px;
+  color: #b59b73;
+}
+.harvest-card div {
+  flex: 1;
+}
+.harvest-card div > span {
+  display: block;
+  font-size: 9px;
+  color: #999a84;
+  margin-bottom: 5px;
+}
+.harvest-card strong {
+  font-size: 11px;
+  font-weight: 400;
+  color: #6e785d;
+}
+.harvest-card b {
+  font-weight: 600;
+}
+.harvest-card > span:last-child {
+  color: #b7baa0;
+  font-size: 22px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #a0a28f;
+  padding: 24px 0;
+}
+footer > span:first-child span {
+  margin-left: 6px;
+  color: #8b9b74;
+}
+footer button {
+  border: 0;
+  background: none;
+  color: #9a9e87;
+  font-size: 9px;
+}
+dialog {
+  border: 1px solid #d5ddc3;
+  border-radius: 20px;
+  padding: 35px;
+  max-width: 520px;
+  width: 90%;
+  background: #faf9ef;
+  color: #4b6045;
+  box-shadow: 0 20px 90px #283c3640;
+}
+dialog::backdrop {
+  background: #334b3655;
+  backdrop-filter: blur(4px);
+}
+dialog h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+dialog p {
+  margin-bottom: 16px;
+}
+dialog .close {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  border: 0;
+  background: none;
+  font-size: 23px;
+  color: #8e977c;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 25px;
+}
+.collection-item {
+  text-align: center;
+  font-size: 10px;
+  padding: 10px 3px;
+  border-radius: 10px;
+  background: #edf0df;
+}
+.collection-item svg {
+  width: 45px;
+  height: 50px;
+  display: block;
+  margin: auto;
+}
+.collection-item.locked {
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+#toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: #4f6749;
+  color: #fffdee;
+  font-size: 12px;
+  box-shadow: 0 4px 20px #34492c25;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s;
+  z-index: 5;
+  max-width: 90%;
+  text-align: center;
+}
+#toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.spark {
+  position: absolute;
+  color: #fff6c6;
+  font-size: 25px;
+  pointer-events: none;
+  animation: pop 1s ease-out forwards;
+  z-index: 5;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-7px) rotate(5deg);
+  }
+}
+@keyframes pop {
+  to {
+    transform: translateY(-65px) scale(1.5);
+    opacity: 0;
+  }
+}
+@media (min-width: 1450px) {
+  main {
+    padding-top: 48px;
+  }
+  .scene {
+    height: 510px;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+  aside {
+    gap: 20px;
+  }
+  .seeds-card {
+    padding: 25px 20px;
+  }
+  .miso-card {
+    padding: 25px;
+  }
+  .seed {
+    padding: 8px 2px;
+  }
+  .toolbox {
+    padding: 20px 24px;
+  }
+  .tools button {
+    padding: 12px 19px;
+  }
+}
+@media (max-width: 1100px) {
+  main {
+    padding: 30px 3% 0;
+  }
+  header {
+    padding: 0 3%;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 16px;
+  }
+  .tool-label {
+    display: none;
+  }
+  .tools button {
+    padding: 9px;
+  }
+  .scene {
+    height: 420px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  .day {
+    display: none;
+  }
+  .plots {
+    left: 12%;
+    right: 10%;
+    gap: 25px 12px;
+  }
+  .scene-note {
+    left: 40%;
+    font-size: 10px;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    height: 75px;
+  }
+  .brand {
+    font-size: 27px;
+  }
+  .brand-icon {
+    font-size: 32px;
+  }
+  nav {
+    gap: 15px;
+  }
+  nav button {
+    font-size: 10px;
+  }
+  nav span,
+  .sound span {
+    display: none;
+  }
+  .sound {
+    padding: 5px 10px;
+  }
+  .game-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .garden-card {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .harvest-card {
+    grid-column: 1/-1;
+  }
+  .intro {
+    margin-bottom: 25px;
+  }
+  h1 {
+    font-size: 28px;
+    max-width: 400px;
+    line-height: 1.35;
+  }
+  .intro p {
+    font-size: 11px;
+  }
+  .eyebrow {
+    font-size: 8px;
+  }
+  .scene {
+    height: 380px;
+  }
+  .plant-art {
+    width: 51px;
+    height: 65px;
+  }
+  .plots {
+    top: 34%;
+    height: 40%;
+    gap: 25px 13px;
+  }
+  .cat {
+    width: 90px;
+  }
+  .scene-note {
+    bottom: 21px;
+    left: 42%;
+    font-size: 9px;
+  }
+  .garden-sign {
+    top: 45px;
+    font-size: 11px;
+  }
+  .tools button {
+    font-size: 10px;
+    padding: 10px 12px;
+  }
+  .toolbox {
+    padding: 17px 12px 12px;
+    gap: 5px;
+  }
+  .tools {
+    gap: 6px;
+  }
+  .tools kbd {
+    display: none;
+  }
+  .hint {
+    font-size: 9px;
+  }
+  .garden-top {
+    font-size: 8px;
+    padding: 0 15px;
+  }
+  .garden-top > div {
+    font-size: 8px;
+  }
+  .miso-card {
+    padding: 18px;
+  }
+  .seeds-card {
+    padding: 18px 12px;
+  }
+  .seeds {
+    gap: 4px;
+  }
+  .seed {
+    font-size: 6px;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading > span {
+    display: none;
+  }
+  .aside-label {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .miso-title {
+    gap: 7px;
+  }
+  .miso-title h2 {
+    font-size: 16px;
+  }
+  .avatar {
+    min-width: 35px;
+    width: 35px;
+    height: 35px;
+    line-height: 28px;
+    font-size: 29px;
+  }
+  .miso-card p {
+    font-size: 11px;
+  }
+  footer {
+    gap: 20px;
+    line-height: 1.8;
+  }
+  footer > span:nth-child(2) {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (min-width: 1101px) and (max-height: 900px) {
+  header {
+    height: 76px;
+  }
+  main {
+    padding-top: 27px;
+  }
+  .intro {
+    margin-bottom: 25px;
+  }
+  .scene {
+    height: 370px;
+  }
+  .miso-card {
+    padding: 17px 20px;
+  }
+  .miso-title {
+    margin: 13px 0 10px;
+  }
+  .happiness {
+    margin-top: 12px;
+  }
+  .seeds-card {
+    padding: 16px 18px 12px;
+  }
+  .seeds-card > p {
+    margin-bottom: 10px;
+  }
+  .seed-info {
+    margin-top: 10px;
+    padding-top: 9px;
+  }
+  .harvest-card {
+    padding: 13px 18px;
+  }
+  aside {
+    gap: 13px;
+  }
+  footer {
+    padding: 17px 0;
+  }
+  .plant-art {
+    height: 70px;
+  }
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.avatar svg {
+  width: 47px;
+  height: 49px;
+  transform: translateY(5px);
+}
+#plot-tooltip {
+  position: fixed;
+  z-index: 20;
+  pointer-events: none;
+  background: #fffdf3;
+  border: 1px solid #cad6b5;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 5px 20px #32452e22;
+  color: #536746;
+  max-width: 260px;
+  text-align: center;
+  font-size: 11px;
+}
+#plot-tooltip strong {
+  display: block;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+#plot-tooltip span {
+  color: #7c896c;
+  font-size: 10px;
+}
+.cat {
+  z-index: 3;
+}
+.cat > svg {
+  transform-origin: 50% 95%;
+  animation: cat-breathe 3s ease-in-out infinite;
+}
+.cat.walking > svg {
+  animation: cat-walk 0.22s ease-in-out infinite alternate;
+}
+.cat.doing-plant > svg {
+  animation: cat-dig 0.3s ease-in-out 4;
+}
+.cat.doing-water > svg {
+  animation: cat-water 0.6s ease-in-out 2;
+}
+.cat.doing-tend > svg {
+  animation: cat-love 0.45s ease-in-out 3;
+}
+.cat.doing-harvest > svg {
+  animation: cat-jump 0.55s ease-in-out 2;
+}
+.cat[data-action]:after {
+  content: attr(data-action);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: #fff9e4;
+  border: 1px solid #d5d9b9;
+  padding: 6px 9px;
+  border-radius: 9px;
+  color: #7d805b;
+  font-size: 9px;
+}
+.action-plant .plant-art {
+  animation: sprout-in 1s ease-out;
+}
+.action-water {
+  animation: soil-water 1.5s ease;
+}
+.action-tend .plant-art {
+  animation: plant-sway 0.4s ease-in-out 3;
+}
+.action-harvest {
+  animation: harvest-glow 1.2s ease;
+}
+.action-fx {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+}
+.action-fx span {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  font-size: 24px;
+  color: #fff8cc;
+  animation: care-rise 1.4s ease-out forwards;
+}
+.action-fx span:first-child {
+  left: 10%;
+  animation-delay: 0.1s;
+}
+.action-fx span:last-child {
+  left: 75%;
+  animation-delay: 0.2s;
+}
+.fx-plant span {
+  color: #765034;
+  font-size: 35px;
+  animation: seed-fall 0.8s ease-out forwards;
+}
+.fx-harvest span:nth-child(2) {
+  font-size: 21px;
+  color: #fffdf0;
+  background: #829c61;
+  border-radius: 20px;
+  padding: 4px 10px;
+  left: 30%;
+}
+.fx-water i {
+  position: absolute;
+  left: calc(5% + var(--n) * 13%);
+  top: -30%;
+  height: 13px;
+  width: 7px;
+  border-radius: 60% 30% 60% 60%;
+  background: #80b9d1;
+  animation: water-drop 1.1s calc(var(--n) * 0.07s) ease-in both;
+}
+@keyframes cat-breathe {
+  50% {
+    transform: scale(1.025, 1.015);
+  }
+}
+@keyframes cat-walk {
+  to {
+    transform: translateY(-5px) rotate(4deg);
+  }
+}
+@keyframes cat-dig {
+  50% {
+    transform: rotate(-9deg) translateY(4px);
+  }
+}
+@keyframes cat-water {
+  50% {
+    transform: rotate(9deg);
+  }
+}
+@keyframes cat-love {
+  50% {
+    transform: scale(1.07) rotate(-3deg);
+  }
+}
+@keyframes cat-jump {
+  50% {
+    transform: translateY(-19px) rotate(4deg);
+  }
+}
+@keyframes sprout-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.2) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) rotate(3deg);
+  }
+}
+@keyframes soil-water {
+  40% {
+    filter: brightness(0.78);
+  }
+  to {
+    filter: brightness(1);
+  }
+}
+@keyframes plant-sway {
+  25% {
+    transform: translateX(-50%) rotate(-12deg);
+  }
+  75% {
+    transform: translateX(-50%) rotate(12deg);
+  }
+}
+@keyframes harvest-glow {
+  50% {
+    box-shadow:
+      0 0 25px #fff1a6,
+      inset 0 0 0 4px #bf966a;
+  }
+}
+@keyframes care-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-70px) scale(1.3);
+  }
+}
+@keyframes seed-fall {
+  from {
+    opacity: 1;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(25px) scale(0.4);
+  }
+}
+@keyframes water-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-25px) rotate(-20deg);
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(90px) rotate(-20deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .action-fx {
+    display: none;
+  }
+  .cat > svg {
+    animation: none;
+  }
+  .cat {
+    transition: none;
+  }
+}
+@media (min-width: 761px) {
+  .game-layout {
+    align-items: stretch;
+  }
+  .garden-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .scene {
+    flex: 1;
+    min-height: 370px;
+  }
+  .toolbox,
+  .hint,
+  .garden-top {
+    flex-shrink: 0;
+  }
+}
+.scene {
+  cursor: pointer;
+}
+.plot {
+  cursor: pointer;
+}
+.cat[data-facing="left"] {
+  transform: scaleX(-1);
+}
+.cat[data-facing="left"]:after {
+  transform: translateX(-50%) scaleX(-1);
+}
+.cat[data-facing="left"] > span {
+  transform: scaleX(-1);
+}
+.cat.walking > svg {
+  animation: cat-stride 0.38s linear infinite;
+}
+.cat.walking .paw-left {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: paw-step 0.38s ease-in-out infinite;
+}
+.cat.walking .paw-right {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: paw-step 0.38s -0.19s ease-in-out infinite;
+}
+.cat.walking .cat-tail {
+  transform-box: fill-box;
+  transform-origin: 0 100%;
+  animation: tail-step 0.65s ease-in-out infinite alternate;
+}
+.walk-marker {
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  border: 2px solid #fff8d8;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: walk-ripple 0.8s ease-out forwards;
+  z-index: 2;
+}
+@keyframes cat-stride {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  25%,
+  75% {
+    transform: translateY(-4px) rotate(1deg);
+  }
+}
+@keyframes paw-step {
+  0%,
+  100% {
+    transform: translateY(-2px) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(3px) rotate(15deg);
+  }
+}
+@keyframes tail-step {
+  from {
+    transform: rotate(-9deg);
+  }
+  to {
+    transform: rotate(12deg);
+  }
+}
+@keyframes walk-ripple {
+  to {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cat.walking > svg,
+  .cat.walking .cat-paw,
+  .cat.walking .cat-tail {
+    animation: none;
+  }
+  .walk-marker {
+    display: none;
+  }
+}
+.cat > .walk-sprite {
+  display: none;
+  animation: none;
+}
+.cat.walking > svg:not(.walk-sprite) {
+  visibility: hidden;
+}
+.cat.walking > .walk-sprite {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: none;
+}
+.walk-rig {
+  transform-origin: 75px 133px;
+  animation: rig-bounce 0.48s infinite ease-in-out;
+}
+.leg {
+  transform-origin: 50px 112px;
+  animation: leg-stride 0.48s infinite ease-in-out;
+}
+.leg-front-near,
+.leg-front-far {
+  transform-origin: 100px 112px;
+}
+.leg-front-near,
+.leg-back-far {
+  animation-delay: -0.24s;
+}
+.leg-back-far,
+.leg-front-far {
+  opacity: 0.85;
+}
+.walk-head {
+  transform-origin: 100px 102px;
+  animation: head-bob 0.48s infinite ease-in-out;
+}
+.walk-tail {
+  transform-origin: 40px 104px;
+  animation: rig-tail 0.85s infinite ease-in-out;
+}
+.walk-shadow {
+  transform-origin: 75px 146px;
+  animation: shadow-breathe 0.48s infinite ease-in-out;
+}
+.cat.walking > #cat-heart {
+  opacity: 0;
+}
+.cat.arriving > svg:not(.walk-sprite) {
+  animation: cat-settle 0.35s ease-out;
+}
+.paw-print {
+  position: absolute;
+  width: 11px;
+  height: 13px;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(20deg);
+  animation: paw-fade 1s ease-out forwards;
+}
+.paw-print svg {
+  width: 100%;
+  height: 100%;
+  fill: #859565;
+  opacity: 0.45;
+}
+@keyframes leg-stride {
+  0%,
+  100% {
+    transform: rotate(-22deg);
+  }
+  50% {
+    transform: rotate(22deg) translateY(-3px);
+  }
+}
+@keyframes rig-bounce {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes head-bob {
+  0%,
+  100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(2px);
+  }
+}
+@keyframes rig-tail {
+  0%,
+  100% {
+    transform: rotate(-9deg);
+  }
+  50% {
+    transform: rotate(14deg);
+  }
+}
+@keyframes shadow-breathe {
+  0%,
+  50%,
+  100% {
+    transform: scaleX(1);
+  }
+  25%,
+  75% {
+    transform: scaleX(0.9);
+  }
+}
+@keyframes cat-settle {
+  0% {
+    transform: scale(1.07, 0.93);
+  }
+  55% {
+    transform: scale(0.98, 1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes paw-fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .walk-rig,
+  .leg,
+  .walk-head,
+  .walk-tail,
+  .walk-shadow {
+    animation: none;
+  }
+  .paw-print {
+    display: none;
+  }
+}
+.action-icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.tools button > span {
+  display: flex;
+  align-items: center;
+}
+.tools button[data-tool="water"] > span {
+  transform: none;
+}
+.tools button[data-tool="harvest"] > span {
+  color: #b08d5f;
+}
+.tools button[data-tool="tend"] > span {
+  color: #8d9d70;
+}
+.plot .need {
+  width: 29px;
+  height: 29px;
+  border: 1px solid #e2e8d2;
+}
+.need .action-icon {
+  width: 19px;
+  height: 19px;
+}
+.plot .need[title="tend"] {
+  color: #82976b;
+}
+.plot .need[title="harvest"] {
+  color: #b08d5f;
+}
+#plot-tooltip .tooltip-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  line-height: 1.5;
+}
+#plot-tooltip .action-icon {
+  width: 20px;
+  height: 20px;
+  color: #79956d;
+}
+#plot-tooltip [data-action-icon="water"] {
+  color: #7196a4;
+}
+#plot-tooltip [data-action-icon="harvest"] {
+  color: #b08d5f;
+}
+.basket .action-icon {
+  width: 29px;
+  height: 29px;
+}
+/* A larger garden canvas, with layered, illustrated scenery. */
+main {
+  max-width: 1880px;
+  padding: 25px 2.5% 0;
+}
+header {
+  height: 76px;
+  padding: 0 2.5%;
+}
+.intro {
+  margin-bottom: 23px;
+}
+h1 {
+  font-size: 32px;
+}
+.game-layout {
+  grid-template-columns: minmax(0, 1fr) 285px;
+  gap: 20px;
+  align-items: start;
+}
+.garden-card {
+  border-radius: 20px;
+  box-shadow: 0 9px 30px #3f542312;
+}
+.scene {
+  flex: none;
+  height: clamp(500px, 67vh, 820px);
+  min-height: 500px;
+}
+.landscape {
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+.garden-sign {
+  top: 15%;
+  left: 42%;
+  background: linear-gradient(110deg, #f5e8c4, #e5d1a1);
+  border-color: #d6be8c;
+  box-shadow:
+    2px 4px 0 #9f936344,
+    0 6px 15px #5a6d3314;
+  letter-spacing: 0.3px;
+  padding: 12px 23px;
+}
+.garden-sign:after {
+  height: 33px;
+  box-shadow: 3px 0 #a58e5e55;
+}
+.plots {
+  left: 19%;
+  right: 17%;
+  top: 36%;
+  height: 37%;
+  gap: 36px 22px;
+  transform: rotate(-3deg);
+}
+.plot {
+  border-radius: 40% 43% 38% 42%;
+  background-color: #a77a50;
+  background-image:
+    radial-gradient(ellipse at 35% 20%, #d0a57555, transparent 65%),
+    radial-gradient(#77533488 1px, transparent 1.5px),
+    repeating-linear-gradient(4deg, transparent 0 13px, #7e583326 14px 16px);
+  background-size:
+    100% 100%,
+    13px 12px,
+    100% 100%;
+  box-shadow:
+    0 8px 0 #886344,
+    0 11px 0 #9c7d4c33,
+    inset 0 0 0 5px #c29b6f,
+    inset 0 10px 17px #6e4d3120;
+  isolation: isolate;
+}
+.plot:before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 40%;
+  border: 1px dashed #d3af8060;
+  pointer-events: none;
+}
+.plot.empty:after {
+  font-size: 27px;
+  color: #e7cba0;
+}
+.plant-art {
+  width: clamp(65px, 7vw, 105px);
+  height: clamp(85px, 9vw, 125px);
+  bottom: 15%;
+  filter: drop-shadow(3px 7px 3px #5b482c33);
+}
+.plant-art svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.plot-tag {
+  font-size: 10px;
+  padding: 4px 9px;
+  bottom: -23px;
+  border: 1px solid #d8cba7;
+  box-shadow: 0 3px 0 #89935a22;
+}
+.plot .need {
+  width: 33px;
+  height: 33px;
+  top: -18px;
+  right: -7px;
+  box-shadow: 0 3px 7px #60733c22;
+}
+.need .action-icon {
+  width: 21px;
+  height: 21px;
+}
+.cat {
+  width: 132px;
+  filter: drop-shadow(0 3px 1px #73834d22);
+}
+.scene-note {
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 23px;
+  font-size: 12px;
+  color: #788061;
+  pointer-events: none;
+}
+.butterfly {
+  right: 17%;
+  top: 26%;
+  font-size: 34px;
+  filter: drop-shadow(0 3px 0 #a18c4b15);
+  pointer-events: none;
+}
+.toolbox {
+  padding: 20px 24px 13px;
+}
+.tools button {
+  padding: 12px 20px;
+  font-size: 12px;
+  gap: 9px;
+  border-radius: 12px;
+}
+.tools .action-icon {
+  width: 25px;
+  height: 25px;
+}
+.hint {
+  font-size: 11px;
+  padding-bottom: 17px;
+}
+.garden-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.garden-controls button {
+  background: #eff2e3;
+  border: 1px solid #d9e1c8;
+  border-radius: 8px;
+  padding: 6px 9px;
+  color: #6a7f54;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.garden-controls button span {
+  font-size: 10px;
+}
+.garden-top {
+  height: 50px;
+}
+.garden-expanded {
+  overflow: hidden;
+}
+.garden-expanded header,
+.garden-expanded .intro,
+.garden-expanded aside,
+.garden-expanded footer {
+  display: none;
+}
+.garden-expanded main {
+  max-width: none;
+  padding: 12px;
+  height: 100svh;
+}
+.garden-expanded .game-layout {
+  display: block;
+  height: 100%;
+}
+.garden-expanded .garden-card {
+  height: 100%;
+  display: flex;
+}
+.garden-expanded .scene {
+  height: auto;
+  min-height: 0;
+  flex: 1;
+}
+.garden-expanded .garden-sign {
+  top: 12%;
+}
+.garden-expanded .toolbox {
+  padding-top: 12px;
+}
+.garden-expanded .hint {
+  padding-bottom: 10px;
+}
+.garden-expanded .plant-art {
+  width: 110px;
+  height: 130px;
+}
+.garden-expanded .cat {
+  width: 145px;
+}
+@media (min-width: 1600px) {
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 310px;
+  }
+  .scene {
+    height: 72vh;
+    max-height: 900px;
+  }
+  .plant-art {
+    width: 110px;
+    height: 130px;
+  }
+  .plots {
+    gap: 40px 28px;
+  }
+}
+@media (max-width: 1100px) {
+  main {
+    padding: 22px 2% 0;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 245px;
+    gap: 14px;
+  }
+  .scene {
+    height: 560px;
+  }
+  .plots {
+    left: 15%;
+    right: 13%;
+    gap: 36px 13px;
+  }
+  .tools button {
+    padding: 11px 12px;
+  }
+  .plant-art {
+    width: 68px;
+    height: 88px;
+  }
+  .garden-top {
+    padding: 0 15px;
+  }
+  .garden-controls {
+    gap: 8px;
+  }
+  .garden-controls > span {
+    display: none;
+  }
+  .cat {
+    width: 115px;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    height: 70px;
+  }
+  main {
+    padding: 22px 12px 0;
+  }
+  .intro {
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  .game-layout {
+    display: flex;
+  }
+  .scene {
+    height: 520px;
+    min-height: 520px;
+  }
+  .plots {
+    left: 12%;
+    right: 10%;
+    top: 37%;
+    height: 35%;
+    gap: 37px 10px;
+  }
+  .plant-art {
+    width: 54px;
+    height: 73px;
+  }
+  .plot {
+    box-shadow:
+      0 6px 0 #886344,
+      inset 0 0 0 3px #c29b6f;
+  }
+  .plot:before {
+    inset: 6px;
+  }
+  .plot-tag {
+    font-size: 8px;
+    padding: 3px 6px;
+  }
+  .plot .need {
+    width: 27px;
+    height: 27px;
+    right: -5px;
+  }
+  .need .action-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .cat {
+    width: 100px;
+  }
+  .garden-sign {
+    left: 32%;
+    top: 19%;
+    font-size: 11px;
+    padding: 10px 15px;
+  }
+  .tools button {
+    padding: 10px 12px;
+    font-size: 10px;
+    gap: 6px;
+  }
+  .tools .action-icon {
+    width: 23px;
+    height: 23px;
+  }
+  .toolbox {
+    padding: 16px 10px 11px;
+  }
+  .hint {
+    font-size: 9px;
+  }
+  .scene-note {
+    font-size: 10px;
+    bottom: 20px;
+  }
+  .butterfly {
+    right: 10%;
+    top: 28%;
+  }
+  .garden-expanded main {
+    padding: 0;
+  }
+  .garden-expanded .garden-card {
+    border-radius: 0;
+  }
+  .garden-expanded .scene {
+    min-height: 0;
+  }
+  .garden-expanded .plots {
+    height: 35%;
+    gap: 35px 10px;
+  }
+  .garden-expanded .plant-art {
+    width: 60px;
+    height: 80px;
+  }
+  .garden-expanded .cat {
+    width: 110px;
+  }
+  .garden-expanded .garden-sign {
+    top: 20%;
+  }
+}
+@media (max-width: 760px) {
+  .toolbox {
+    gap: 6px;
+  }
+  .tools {
+    min-width: 0;
+    gap: 5px;
+  }
+  .tools button {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 6px;
+    gap: 4px;
+    min-width: 0;
+  }
+  .tools .action-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .help {
+    flex-shrink: 0;
+  }
+  .garden-expanded .tools button {
+    padding: 10px 6px;
+  }
+}
+.garden-expanded .garden-card {
+  flex-direction: column;
+}
+.garden-controls #reset-progress {
+  background: #f8f1e6;
+  border-color: #e5d6bd;
+  color: #947455;
+}
+.garden-controls #reset-progress span {
+  display: inline;
+}
+.garden-controls #reset-progress:hover {
+  background: #f0e5d3;
+}
+@media (max-width: 480px) {
+  .garden-top {
+    padding: 0 10px;
+  }
+  .garden-top > div:first-child {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+    gap: 5px;
+  }
+  .garden-controls {
+    gap: 5px;
+  }
+  .garden-controls button {
+    padding: 6px;
+  }
+  .garden-controls #reset-progress span {
+    font-size: 9px;
+  }
+}
+.mobile-plot-info {
+  display: none;
+}
+@media (max-width: 760px) {
+  .plot-tag {
+    display: none;
+  }
+  #plot-tooltip {
+    display: none !important;
+  }
+  .mobile-plot-info {
+    display: flex;
+    flex: none;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 6px 10px;
+    background: #f3f4e7;
+    border-top: 1px solid #e2e7d2;
+    color: #84916e;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .mobile-plot-info strong {
+    font-family: "Lora", serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #607650;
+  }
+  .mobile-plot-info .tooltip-step {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+  }
+  .mobile-plot-info .action-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .garden-expanded .mobile-plot-info {
+    min-height: 40px;
+  }
+}

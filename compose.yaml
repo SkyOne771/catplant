@@ -1,0 +1,6 @@
+services:
+  catplant:
+    build: .
+    ports:
+      - "${CATPLANT_BIND:-127.0.0.1}:${CATPLANT_PORT:-8080}:80"
+    restart: unless-stopped
